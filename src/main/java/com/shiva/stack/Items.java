@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+@JsonIgnoreProperties
 public class Items implements Serializable {
 
 	/**
@@ -35,6 +37,16 @@ public class Items implements Serializable {
 	
 	private String title;
 	
+	private Date last_edit_date;
+	
+	public Date getLast_edit_date() {
+		return last_edit_date;
+	}
+
+	public void setLast_edit_date(Date last_edit_date) {
+		this.last_edit_date = last_edit_date;
+	}
+
 	private Owner owner;
 
 	public List<String> getTags() {
@@ -147,11 +159,7 @@ public class Items implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Items [tags=" + tags + ", is_answered=" + is_answered + ", view_count=" + view_count
-				+ ", accepted_answer_id=" + accepted_answer_id + ", answer_count=" + answer_count + ", score=" + score
-				+ ", last_activity_date=" + last_activity_date + ", creation_date=" + creation_date + ", question_id="
-				+ question_id + ", content_license=" + content_license + ", link=" + link + ", title=" + title
-				+ ", owner=" + owner + "]";
+		return "Title: "+title +"\n"+"URL: "+link +"\n"+"Author Display Name: "+owner.getDisplay_name()+"\n";
 	}
 	
 }

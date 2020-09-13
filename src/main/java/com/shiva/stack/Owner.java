@@ -2,6 +2,9 @@ package com.shiva.stack;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties
 public class Owner implements Serializable{
 
 	/**
@@ -15,6 +18,15 @@ public class Owner implements Serializable{
 	private String profile_image;
 	private String display_name;
 	private String link;
+	private Integer accept_rate;
+	
+	
+	public Integer getAccept_rate() {
+		return accept_rate;
+	}
+	public void setAccept_rate(Integer accept_rate) {
+		this.accept_rate = accept_rate;
+	}
 	public Integer getReputation() {
 		return reputation;
 	}

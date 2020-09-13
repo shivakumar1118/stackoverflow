@@ -3,6 +3,9 @@ package com.shiva.stack;
 import java.io.Serializable;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties
 public class MainObject implements Serializable {
 
 	/**
