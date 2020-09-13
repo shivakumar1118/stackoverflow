@@ -39,6 +39,16 @@ public class Items implements Serializable {
 	
 	private Date last_edit_date;
 	
+	private Date closed_date;
+	
+	public Date getClosed_date() {
+		return closed_date;
+	}
+
+	public void setClosed_date(Date closed_date) {
+		this.closed_date = closed_date;
+	}
+
 	public Date getLast_edit_date() {
 		return last_edit_date;
 	}
